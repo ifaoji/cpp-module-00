@@ -11,7 +11,7 @@ SRCS = $(RAW_SRCS:%=$(SRC_DIR)/%.cpp)
 
 OBJ_DIR = obj
 OBJS = $(RAW_SRCS:%=$(OBJ_DIR)/%.o)
-OBJ_DIRS := $(dir $(OBJS))
+OBJ_DIRS := $(sort $(dir $(OBJS)))
 
 NAME = megaphone
 
