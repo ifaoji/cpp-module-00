@@ -1,6 +1,7 @@
-#include "Contact.hpp"
 #include <iostream>
 #include <string>
+
+#include "Contact.hpp"
 
 static inline void trim(std::string &str) {
   str.erase(0, str.find_first_not_of(" \f\n\r\t\v"));
