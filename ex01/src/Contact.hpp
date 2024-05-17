@@ -1,9 +1,9 @@
 #pragma once
 
-#include <ostream>
-#ifndef __CONTACT_HPP__
-#define __CONTACT_HPP__
+#ifndef CONTACT_HPP
+#define CONTACT_HPP
 
+#include <ostream>
 #include <string>
 
 class Contact {
@@ -26,7 +26,6 @@ private:
   std::string first_name;
   std::string last_name;
   std::string nickname;
-  // TODO: which datatype should this be
   std::string phone_number;
   std::string darkest_secret;
 };

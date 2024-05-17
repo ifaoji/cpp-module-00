@@ -30,12 +30,6 @@ bool Contact::is_empty() const {
          this->phone_number.empty();
 }
 
-// std::string first_name;
-// std::string last_name;
-// std::string nickname;
-// // TODO: which datatype should this be
-// std::string phone_number;
-// std::string darkest_secret;
 std::ostream &operator<<(std::ostream &os, const Contact &c) {
   os << "First Name: " << c.first_name << std::endl;
   os << "Last Name: " << c.last_name << std::endl;
