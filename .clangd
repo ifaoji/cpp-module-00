@@ -1,0 +1,15 @@
+CompileFlags:
+  Add:
+    - -Wall
+    - -Wextra
+    - -Werror
+    - -std=c++98
+
+Diagnostics:
+  Suppress: []
+
+Index:
+  Background: Build
+
+Completion:
+  AllScopes: true
