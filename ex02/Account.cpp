@@ -24,6 +24,8 @@ Account::Account(int initial_deposit)
 }
 
 Account::~Account() {
+  _nbAccounts -= 1;
+
   _displayTimestamp();
 
   std::cout << " "
