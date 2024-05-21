@@ -1,4 +1,4 @@
-CXX = clang++-12
+CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -MMD -MP
 CPPFLAGS = 
 LDFLAGS =
