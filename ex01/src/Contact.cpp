@@ -1,3 +1,5 @@
+#include <iostream>
+
 #include "Contact.hpp"
 
 void Contact::set_data(std::string first_name, std::string last_name,
@@ -30,12 +32,10 @@ bool Contact::is_empty() const {
          this->phone_number.empty();
 }
 
-std::ostream &operator<<(std::ostream &os, const Contact &c) {
-  os << "First Name: " << c.first_name << std::endl;
-  os << "Last Name: " << c.last_name << std::endl;
-  os << "Nickname: " << c.nickname << std::endl;
-  os << "Phone Number: " << c.phone_number << std::endl;
-  os << "Darkest Secret: " << c.darkest_secret << std::endl;
-
-  return os;
+void Contact::print() const {
+  std::cout << "First Name: " << this->first_name << std::endl;
+  std::cout << "Last Name: " << this->last_name << std::endl;
+  std::cout << "Nickname: " << this->nickname << std::endl;
+  std::cout << "Phone Number: " << this->phone_number << std::endl;
+  std::cout << "Darkest Secret: " << this->darkest_secret << std::endl;
 }

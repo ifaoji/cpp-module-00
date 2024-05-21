@@ -20,7 +20,7 @@ public:
                 std::string nickname, std::string phone_number,
                 std::string darkest_secret);
 
-  friend std::ostream &operator<<(std::ostream &os, const Contact &contact);
+  void print() const;
 
 private:
   std::string first_name;

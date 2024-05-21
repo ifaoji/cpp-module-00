@@ -28,7 +28,7 @@ void start_game(PhoneBook &phone_book) {
         continue;
       }
 
-      std::cout << phone_book;
+      phone_book.print();
 
       int index = prompt_contact_index(phone_book.contact_count());
       if (std::cin.fail())
@@ -49,7 +49,7 @@ void start_game(PhoneBook &phone_book) {
         continue;
       }
 
-      std::cout << *contact;
+      contact->print();
 
       continue;
     }

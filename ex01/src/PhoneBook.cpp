@@ -38,28 +38,26 @@ static inline std::string print_truncated(const std::string &str) {
   return str.substr(0, 9) + ".";
 }
 
-std::ostream &operator<<(std::ostream &os, const PhoneBook &pb) {
-  os << "|" << std::setw(10) << "Index" << std::setw(0);
-  os << "|" << std::setw(10) << "First Name" << std::setw(0);
-  os << "|" << std::setw(10) << "Last Name" << std::setw(0);
-  os << "|" << std::setw(10) << "Nickname" << std::setw(0) << "|";
-  os << std::endl;
+void PhoneBook::print() const {
+  std::cout << "|" << std::setw(10) << "Index" << std::setw(0);
+  std::cout << "|" << std::setw(10) << "First Name" << std::setw(0);
+  std::cout << "|" << std::setw(10) << "Last Name" << std::setw(0);
+  std::cout << "|" << std::setw(10) << "Nickname" << std::setw(0) << "|";
+  std::cout << std::endl;
 
   for (int i = 0; i < MAX_CONTACTS; i++) {
-    Contact contact = pb.contacts[i];
+    Contact contact = this->contacts[i];
     if (contact.is_empty())
       continue;
 
-    os << "|" << std::setw(10) << i << std::setw(0);
-    os << "|" << std::setw(10) << print_truncated(contact.get_first_name())
-       << std::setw(0);
-    os << "|" << std::setw(10) << print_truncated(contact.get_last_name())
-       << std::setw(0);
-    os << "|" << std::setw(10) << print_truncated(contact.get_nickname())
-       << std::setw(0) << "|";
+    std::cout << "|" << std::setw(10) << i << std::setw(0);
+    std::cout << "|" << std::setw(10)
+              << print_truncated(contact.get_first_name()) << std::setw(0);
+    std::cout << "|" << std::setw(10)
+              << print_truncated(contact.get_last_name()) << std::setw(0);
+    std::cout << "|" << std::setw(10) << print_truncated(contact.get_nickname())
+              << std::setw(0) << "|";
 
-    os << std::endl;
+    std::cout << std::endl;
   }
-
-  return os;
 }

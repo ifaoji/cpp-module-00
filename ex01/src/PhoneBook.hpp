@@ -17,8 +17,7 @@ public:
   int contact_count() const;
 
   const Contact *get_contact(int index) const;
-
-  friend std::ostream &operator<<(std::ostream &os, const PhoneBook &pb);
+  void print() const;
 
 private:
   Contact contacts[MAX_CONTACTS];
