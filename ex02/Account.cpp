@@ -25,6 +25,9 @@ Account::Account(int initial_deposit)
 
 Account::~Account() {
   _nbAccounts -= 1;
+  _totalAmount -= this->_amount;
+  _totalNbDeposits -= this->_nbDeposits;
+  _totalNbWithdrawals -= this->_nbWithdrawals;
 
   _displayTimestamp();
 
