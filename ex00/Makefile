@@ -6,7 +6,7 @@ LDLIBS =
 
 RAW_SRCS =	megaphone
 
-SRC_DIR = src
+SRC_DIR = ./
 SRCS = $(RAW_SRCS:%=$(SRC_DIR)/%.cpp)
 
 OBJ_DIR = obj
